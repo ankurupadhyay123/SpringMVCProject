@@ -33,12 +33,17 @@ public class StudentController  extends AbstractController {
 public class StudentController  extends MultiActionController {
 
 
+//TODO: action name should be something like : renderPage
+// TODO : Should have RequestMapping annotation
     public ModelAndView pageRenderController(HttpServletRequest httpServletRequest,
                        HttpServletResponse httpServletResponse) throws Exception {
         ModelAndView modelAndView = new ModelAndView("myindex");
         pageShowController(httpServletRequest,httpServletResponse);
         return modelAndView;
     }
+
+//TODO: action name should be something like : show Page
+// TODO : Should have RequestMapping annotation
 
     public void pageShowController(HttpServletRequest httpServletRequest,
                        HttpServletResponse httpServletResponse) throws Exception {
