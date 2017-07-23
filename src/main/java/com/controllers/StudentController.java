@@ -33,19 +33,17 @@ public class StudentController  extends AbstractController {
 public class StudentController  extends MultiActionController {
 
 
-//TODO: action name should be something like : renderPage
-// TODO : Should have RequestMapping annotation
-    public ModelAndView pageRenderController(HttpServletRequest httpServletRequest,
+//RequestMapping is used in question 3, & in question 1  & 2 we have to use
+action controller without annotation that's why i haven't use
+    public ModelAndView renderPage(HttpServletRequest httpServletRequest,
                        HttpServletResponse httpServletResponse) throws Exception {
         ModelAndView modelAndView = new ModelAndView("myindex");
         pageShowController(httpServletRequest,httpServletResponse);
         return modelAndView;
     }
 
-//TODO: action name should be something like : show Page
-// TODO : Should have RequestMapping annotation
-
-    public void pageShowController(HttpServletRequest httpServletRequest,
+//RequestMapping is used in question 3, & in question 1  & 2 we have to use action controller without annotation
+    public void showPage(HttpServletRequest httpServletRequest,
                        HttpServletResponse httpServletResponse) throws Exception {
         httpServletResponse.setContentType("text/html");
         httpServletResponse.getWriter().println("<b>HELLO World</b>");
